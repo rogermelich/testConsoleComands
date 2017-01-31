@@ -11,7 +11,7 @@ class testComand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'rogermelich:test';
 
     /**
      * The console command description.
@@ -37,6 +37,6 @@ class testComand extends Command
      */
     public function handle()
     {
-        //
+        require base_path('')
     }
 }
