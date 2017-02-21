@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\SendWelcomeEmail;
 use App\Console\Commands\testComand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -15,7 +16,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        TestCommand::class
+        TestCommand::class,
+        SendWelcomeEmail::class
     ];
 
     /**
