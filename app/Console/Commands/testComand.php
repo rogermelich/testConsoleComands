@@ -37,6 +37,6 @@ class testComand extends Command
      */
     public function handle()
     {
-        require base_path('')
+        dump('Hello test command!');
     }
 }
