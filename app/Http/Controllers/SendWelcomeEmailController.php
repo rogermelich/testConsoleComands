@@ -7,6 +7,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Console\Commands\SendWelcomeEmail;
 use Illuminate\Http\Request;
 
 /**
@@ -15,14 +16,26 @@ use Illuminate\Http\Request;
  */
 class SendWelcomeEmailController extends Controller
 {
-    public function index()
+
+    /**
+    * @var SendWelcomeEmail
+    */
+    public $email;
+
+    /**
+     * SendWelcomeEmailController constructor.
+     * @param SendWelcomeEmail $email
+     */
+    public function __construct(SendWelcomeEmail $email)
     {
-        $data = [];
-        return view('sendWelcomeEmail', $data);
+        $this->email = $email;
     }
 
-    public function send()
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index()
     {
-        dump('Sending Email');
+        $this->email->send();
     }
 }
