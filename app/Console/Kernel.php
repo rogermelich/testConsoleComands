@@ -16,7 +16,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        TestCommand::class,
+        TestComand::class,
         SendWelcomeEmail::class
     ];
 
