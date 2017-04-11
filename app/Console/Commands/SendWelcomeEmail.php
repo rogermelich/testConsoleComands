@@ -22,20 +22,22 @@ class SendWelcomeEmail extends Command
     protected $description = 'Command description';
 
     /**
+     * @var SendWelcomeEmail
+     */
+    public $email;
+
+
+    /**
      * Create a new command instance.
      *
      * @return void
      */
-    public function __construct(SendWelcomeEmail $email)
+    public function __construct(SendWelcomeEmailService $email)
     {
         parent::__construct();
         $this->email = $email;
     }
 
-    /**
-    * @var SendWelcomeEmail
-    */
-    public $email;
 
     /**
      * Execute the console command.

@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 use App\Console\Commands\SendWelcomeEmail;
 use App\Mail\WelcomeEmail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 /**
  * Class HomeController
